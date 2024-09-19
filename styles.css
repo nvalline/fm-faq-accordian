@@ -1,0 +1,54 @@
+/* ----- Fonts ----- */
+@font-face {
+	font-family: 'Work Sans';
+	src: url('./assets/fonts/WorkSans-VariableFont_wght.ttf'),
+		url('./assets/fonts/WorkSans-Italic-VariableFont_wght.ttf'),
+		url('./assets/fonts/static/WorkSans-Bold.ttf'),
+		url('./assets/fonts/static/WorkSans-Regular.ttf'),
+		url('./assets/fonts/static/WorkSans-SemiBold.ttf');
+}
+
+/* ----- Variables ----- */
+:root {
+	/* colors */
+	--clr-white: hsl(0, 0%, 100%);
+	--clr-light-pink: hsl(275, 100%, 97%);
+	--clr-grayish-purple: hsl(292, 16%, 49%);
+	--clr-dark-purple: hsl(292, 42%, 14%);
+}
+
+/* ----- Reset ----- */
+
+/* Remove Default Spacing */
+* {
+	margin: 0;
+	padding: 0;
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+/* Set core body defaults */
+body {
+	min-height: 100vh;
+	font-family: 'Work Sans', sans-serif;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+	display: block;
+}
+
+/* Details & Summary Reset */
+details summary {
+	cursor: pointer;
+}
+
+details summary > * {
+	display: inline;
+}
