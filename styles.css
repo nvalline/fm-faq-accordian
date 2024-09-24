@@ -48,15 +48,6 @@ picture {
 	display: block;
 }
 
-/* Details & Summary Reset */
-details summary {
-	cursor: pointer;
-}
-
-details summary > * {
-	display: inline;
-}
-
 /* Application Styles */
 main {
 	padding: 1.5rem;
@@ -94,4 +85,62 @@ main {
 	font-size: 2rem;
 	font-weight: 700;
 	color: var(--clr-dark-purple);
+}
+
+/* Details & Summary */
+details {
+	padding-top: 1.25rem;
+	padding-bottom: 1.25rem;
+}
+
+details:first-child {
+	padding-top: 0;
+}
+
+details:last-child {
+	padding-bottom: 0;
+}
+
+details:not(:last-child) {
+	border-bottom: 1px solid var(--clr-light-pink);
+}
+
+details summary {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	cursor: pointer;
+}
+
+details summary::marker {
+	display: none;
+	content: '';
+}
+
+details summary h2 {
+	max-width: 225px;
+	font-size: 1rem;
+	font-weight: 600;
+	color: var(--clr-dark-purple);
+}
+
+details summary > span {
+	height: 30px;
+	width: 30px;
+	background-image: url('./assets/images/icon-plus.svg');
+}
+
+details[open] summary > span {
+	height: 30px;
+	width: 30px;
+	background-image: url('./assets/images/icon-minus.svg');
+}
+
+details p {
+	margin-top: 1.5rem;
+	font-size: 0.875rem;
+	font-weight: 400;
+	line-height: 150%;
+	color: var(--clr-grayish-purple);
 }
