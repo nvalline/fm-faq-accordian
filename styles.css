@@ -15,6 +15,7 @@
 	--clr-light-pink: hsl(275, 100%, 97%);
 	--clr-grayish-purple: hsl(292, 16%, 49%);
 	--clr-dark-purple: hsl(292, 42%, 14%);
+	--clr-pink: hsl(281, 83%, 54%);
 }
 
 /* ----- Reset ----- */
@@ -48,7 +49,7 @@ picture {
 	display: block;
 }
 
-/* Application Styles */
+/* ----- Application Styles (Mobile) ----- */
 main {
 	padding: 1.5rem;
 	display: flex;
@@ -56,6 +57,7 @@ main {
 	justify-content: center;
 	background-image: url('./assets/images/background-pattern-mobile.svg');
 	background-repeat: no-repeat;
+	background-position-x: center;
 	background-color: var(--clr-light-pink);
 }
 
@@ -123,6 +125,11 @@ details summary h2 {
 	font-size: 1rem;
 	font-weight: 600;
 	color: var(--clr-dark-purple);
+	transition: color 300ms ease-in-out;
+}
+
+details summary h2:hover {
+	color: var(--clr-pink);
 }
 
 details summary > span {
@@ -143,4 +150,44 @@ details p {
 	font-weight: 400;
 	line-height: 150%;
 	color: var(--clr-grayish-purple);
+}
+
+/* ----- Media Queries ----- */
+
+@media (min-width: 768px) {
+	main {
+		background-image: url('./assets/images/background-pattern-desktop.svg');
+	}
+
+	.card {
+		max-width: 600px;
+		padding: 2.5rem;
+		gap: 2rem;
+		border-radius: 1rem;
+	}
+
+	.card-header img {
+		height: 40px;
+		width: 40px;
+	}
+
+	.card-header h1 {
+		font-size: 3.5rem;
+	}
+
+	/* Details & Summary */
+	details {
+		padding-top: 1.5rem;
+		padding-bottom: 1.5rem;
+	}
+
+	details summary h2 {
+		max-width: unset;
+		font-size: 1.125rem;
+	}
+
+	details p {
+		margin-top: 1.5rem;
+		font-size: 1rem;
+	}
 }
