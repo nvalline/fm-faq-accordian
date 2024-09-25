@@ -134,7 +134,8 @@ details summary h2 {
 	transition: color 300ms ease-in-out;
 }
 
-details summary h2:hover {
+details summary h2:hover,
+details summary h2:focus {
 	color: var(--clr-pink);
 }
 
