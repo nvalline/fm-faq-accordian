@@ -135,7 +135,8 @@ details summary h2 {
 }
 
 details summary h2:hover,
-details summary h2:focus {
+details summary h2:focus,
+details summary h2:target {
 	color: var(--clr-pink);
 }
 
